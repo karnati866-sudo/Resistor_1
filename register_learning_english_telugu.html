@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registers | రిజిస్టర్లు - Student Learning Portal</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,"Noto Sans Telugu",sans-serif;background:#f4f7fb;color:#172033;line-height:1.7}
+header{background:linear-gradient(135deg,#172554,#2563eb);color:#fff;padding:42px 20px;text-align:center}
+header h1{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:8px}
+header p{max-width:850px;margin:auto;color:#dbeafe;font-size:1.05rem}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #dbe3ef;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:10px}
+nav a{color:#1d4ed8;text-decoration:none;font-weight:700;padding:8px 13px;border-radius:20px}
+nav a:hover{background:#eff6ff}
+.container{max-width:1100px;margin:30px auto;padding:0 18px}
+.card{background:#fff;border:1px solid #e1e8f2;border-radius:18px;padding:25px;margin-bottom:22px;box-shadow:0 8px 25px #1e3a8a12}
+h2{color:#1e3a8a;margin-bottom:12px}
+h3{color:#334155;margin:14px 0 8px}
+.te{color:#475569;margin-top:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.info{background:#f8fafc;border-left:4px solid #2563eb;padding:15px;border-radius:10px}
+.diagram{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0}
+.box{background:#eff6ff;border:2px solid #2563eb;border-radius:12px;padding:14px 18px;text-align:center;min-width:125px;font-weight:700}
+.arrow{font-size:25px;color:#2563eb}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{padding:11px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top}
+th{background:#eff6ff;color:#1e3a8a}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+button{border:0;border-radius:10px;padding:10px 15px;background:#2563eb;color:white;font-weight:700;cursor:pointer}
+button:hover{background:#1d4ed8}
+button.secondary{background:#64748b}
+input{width:100%;max-width:420px;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px}
+.reg{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin:18px 0}
+.bit{padding:14px 5px;border-radius:8px;background:#e2e8f0;text-align:center;font-weight:800;border:1px solid #cbd5e1}
+.bit.one{background:#2563eb;color:#fff;border-color:#1d4ed8}
+.bit small{display:block;font-weight:500;font-size:11px;margin-top:4px}
+.value{text-align:center;font-size:1.2rem;font-weight:800;color:#1e3a8a;margin:10px}
+.note{background:#fff7ed;border-left:4px solid #f97316;padding:14px;border-radius:8px}
+footer{text-align:center;padding:28px;color:#64748b}
+@media(max-width:600px){.reg{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Registers | రిజిస్టర్లు</h1>
+<p>Student Learning Portal | విద్యార్థుల కోసం రిజిస్టర్లను సులభంగా నేర్చుకునే వెబ్‌సైట్</p>
+</header>
+
+<nav>
+<a href="#definition">Definition | నిర్వచనం</a>
+<a href="#diagram">Diagram | రేఖాచిత్రం</a>
+<a href="#types">Types | రకాలు</a>
+<a href="#figures">Figures | చిత్రాలు</a>
+<a href="#simulation">Simulation | సిమ్యులేషన్</a>
+</nav>
+
+<main class="container">
+
+<section id="definition" class="card">
+<h2>1. Register Definition | రిజిస్టర్ నిర్వచనం</h2>
+<p><strong>English:</strong> A register is a small, high-speed storage location inside a CPU or digital circuit. It temporarily stores binary data, instructions, addresses, or intermediate results.</p>
+<p class="te"><strong>తెలుగు:</strong> రిజిస్టర్ అనేది CPU లేదా డిజిటల్ సర్క్యూట్‌లో ఉండే చిన్న మరియు చాలా వేగంగా పనిచేసే తాత్కాలిక నిల్వ స్థానం. ఇది binary data, instructions, addresses లేదా intermediate results‌ను కొంతకాలం నిల్వ చేస్తుంది.</p>
+
+<div class="grid" style="margin-top:16px">
+<div class="info"><strong>Fast | వేగవంతమైనది</strong><br>Registers are very fast storage elements.<br>రిజిస్టర్లు చాలా వేగంగా పనిచేసే storage elements.</div>
+<div class="info"><strong>Binary | బైనరీ</strong><br>They store information as 0s and 1s.<br>ఇవి సమాచారాన్ని 0 మరియు 1 రూపంలో నిల్వ చేస్తాయి.</div>
+<div class="info"><strong>Temporary | తాత్కాలికం</strong><br>Data is held while it is needed.<br>అవసరమైన సమయంలో డేటాను తాత్కాలికంగా ఉంచుతుంది.</div>
+</div>
+</section>
+
+<section id="diagram" class="card">
+<h2>2. Basic Register Diagram | ప్రాథమిక రిజిస్టర్ రేఖాచిత్రం</h2>
+<p><strong>English:</strong> The diagram shows the basic working idea of an 8-bit register.</p>
+<p class="te"><strong>తెలుగు:</strong> ఈ రేఖాచిత్రం 8-bit register ఎలా పనిచేస్తుందో ప్రాథమికంగా చూపిస్తుంది.</p>
+
+<div class="diagram">
+<div class="box">Input Data<br>ఇన్‌పుట్ డేటా<br>D7–D0</div><div class="arrow">→</div>
+<div class="box">8-Bit Register<br>8-బిట్ రిజిస్టర్</div><div class="arrow">→</div>
+<div class="box">Output Data<br>అవుట్‌పుట్ డేటా<br>Q7–Q0</div>
+</div>
+
+<div class="diagram">
+<div class="box">Clock<br>క్లాక్</div><div class="arrow">↓</div>
+<div class="box">Storage / Flip-Flops<br>నిల్వ / ఫ్లిప్-ఫ్లాప్స్</div>
+</div>
+
+<p class="note"><strong>English:</strong> On an active clock edge, the register can load the input bits and keep them until the next update.<br>
+<strong>తెలుగు:</strong> సరైన clock edge వచ్చినప్పుడు register input bits‌ను load చేసుకుని, తదుపరి update వరకు వాటిని నిల్వ ఉంచుతుంది.</p>
+</section>
+
+<section id="types" class="card">
+<h2>3. Types of Registers | రిజిస్టర్ల రకాలు</h2>
+<table>
+<tr><th>Register | రిజిస్టర్</th><th>Purpose | ఉపయోగం</th></tr>
+<tr><td><strong>Accumulator (ACC)</strong><br>అక్యుమ్యులేటర్</td><td>Stores intermediate arithmetic and logic results.<br>Arithmetic మరియు Logic operations ద్వారా వచ్చిన intermediate results‌ను నిల్వ చేస్తుంది.</td></tr>
+<tr><td><strong>Program Counter (PC)</strong><br>ప్రోగ్రామ్ కౌంటర్</td><td>Stores the address of the next instruction.<br>తదుపరి instruction యొక్క address‌ను నిల్వ చేస్తుంది.</td></tr>
+<tr><td><strong>Instruction Register (IR)</strong><br>ఇన్‌స్ట్రక్షన్ రిజిస్టర్</td><td>Holds the current instruction.<br>ప్రస్తుతం process అవుతున్న instruction‌ను ఉంచుతుంది.</td></tr>
+<tr><td><strong>Memory Address Register (MAR)</strong><br>మెమరీ అడ్రస్ రిజిస్టర్</td><td>Holds the memory address being accessed.<br>Access చేయాల్సిన memory address‌ను ఉంచుతుంది.</td></tr>
+<tr><td><strong>Memory Data Register (MDR)</strong><br>మెమరీ డేటా రిజిస్టర్</td><td>Temporarily holds data moving to or from memory.<br>Memoryకి వెళ్లే లేదా Memory నుంచి వచ్చే data‌ను తాత్కాలికంగా ఉంచుతుంది.</td></tr>
+<tr><td><strong>General-Purpose Register</strong><br>జనరల్ పర్పస్ రిజిస్టర్</td><td>Stores data used during program execution.<br>Program execution సమయంలో అవసరమైన data‌ను నిల్వ చేస్తుంది.</td></tr>
+</table>
+</section>
+
+<section id="figures" class="card">
+<h2>4. Register Figure | రిజిస్టర్ చిత్రం</h2>
+<h3>Parallel Load Register | ప్యారలల్ లోడ్ రిజిస్టర్</h3>
+<p><strong>English:</strong> Each bit position can be represented by a flip-flop. Eight flip-flops together form an 8-bit register.</p>
+<p class="te"><strong>తెలుగు:</strong> ప్రతి bit position‌ను ఒక flip-flop ద్వారా సూచించవచ్చు. ఎనిమిది flip-flops కలిసి 8-bit register‌ను తయారు చేస్తాయి.</p>
+
+<div class="diagram">
+<div class="box">D7</div><div class="box">D6</div><div class="box">D5</div><div class="box">D4</div>
+<div class="box">D3</div><div class="box">D2</div><div class="box">D1</div><div class="box">D0</div>
+</div>
+<div class="diagram" style="font-size:28px;color:#2563eb">↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓</div>
+<div class="diagram">
+<div class="box">Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0</div>
+</div>
+</section>
+
+<section id="simulation" class="card">
+<h2>5. 8-Bit Register Simulation | 8-బిట్ రిజిస్టర్ సిమ్యులేషన్</h2>
+<p><strong>English:</strong> Enter an 8-bit binary value, load it, and press the clock button to store it in the register.</p>
+<p class="te"><strong>తెలుగు:</strong> 8-bit binary value‌ను నమోదు చేసి, Load Input నొక్కండి. తరువాత Clock నొక్కితే ఆ value register‌లో store అవుతుంది.</p>
+
+<label for="inputBits"><strong>Input (8 bits) | ఇన్‌పుట్ (8 బిట్స్):</strong></label><br>
+<input id="inputBits" maxlength="8" value="10110010" inputmode="numeric" aria-label="8-bit binary input">
+
+<div class="controls">
+<button onclick="loadRegister()">Load Input | ఇన్‌పుట్ లోడ్</button>
+<button onclick="clockRegister()">Clock ↑ | క్లాక్</button>
+<button class="secondary" onclick="clearRegister()">Clear | క్లియర్</button>
+</div>
+
+<div class="value">Register Output | రిజిస్టర్ అవుట్‌పుట్: <span id="decimal">0</span> decimal</div>
+<div class="reg" id="reg"></div>
+
+<p id="status" class="note">Register is cleared. Press Load Input and then Clock ↑.<br>రిజిస్టర్ క్లియర్ అయింది. Load Input తరువాత Clock ↑ నొక్కండి.</p>
+
+<h3>How to use | ఎలా ఉపయోగించాలి</h3>
+<ol style="padding-left:22px">
+<li>Enter 8 binary digits — <strong>0 or 1</strong>.<br>8 binary digits — <strong>0 లేదా 1</strong> — నమోదు చేయండి.</li>
+<li>Click <strong>Load Input</strong>.<br><strong>Load Input</strong> నొక్కండి.</li>
+<li>Click <strong>Clock ↑</strong> to store the value.<br>Value‌ను register‌లో store చేయడానికి <strong>Clock ↑</strong> నొక్కండి.</li>
+<li>Observe the eight register bits.<br>రిజిస్టర్‌లోని 8 bits‌ను గమనించండి.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>6. Quick Revision | త్వరిత పునశ్చరణ</h2>
+<div class="grid">
+<div class="info"><strong>Register = Fast temporary storage</strong><br>రిజిస్టర్ = వేగవంతమైన తాత్కాలిక నిల్వ</div>
+<div class="info"><strong>Unit = Bit (0 or 1)</strong><br>యూనిట్ = Bit (0 లేదా 1)</div>
+<div class="info"><strong>8-bit Register = 8 binary bits</strong><br>8-bit రిజిస్టర్ = 8 binary bits</div>
+<div class="info"><strong>Clock = Controls storage/update</strong><br>Clock = Storage/Update‌ను నియంత్రిస్తుంది</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>Digital Registers Learning Portal | డిజిటల్ రిజిస్టర్స్ లెర్నింగ్ పోర్టల్</p>
+<p>For students | విద్యార్థుల కోసం</p>
+</footer>
+
+<script>
+let inputValue="00000000";
+let registerValue="00000000";
+
+function drawRegister(){
+  const r=document.getElementById("reg");
+  r.innerHTML="";
+  registerValue.split("").forEach((b,i)=>{
+    const d=document.createElement("div");
+    d.className="bit"+(b==="1"?" one":"");
+    d.innerHTML=b+"<small>Q"+(7-i)+"</small>";
+    r.appendChild(d);
+  });
+  document.getElementById("decimal").textContent=parseInt(registerValue,2);
+}
+function validBits(v){return /^[01]{8}$/.test(v)}
+function loadRegister(){
+  const v=document.getElementById("inputBits").value.trim();
+  if(!validBits(v)){
+    document.getElementById("status").innerHTML="Please enter exactly 8 binary digits.<br>దయచేసి ఖచ్చితంగా 8 binary digits నమోదు చేయండి.";
+    return;
+  }
+  inputValue=v;
+  document.getElementById("status").innerHTML="Input "+inputValue+" is ready. Press Clock ↑ to store it.<br>Input "+inputValue+" సిద్ధంగా ఉంది. Store చేయడానికి Clock ↑ నొక్కండి.";
+}
+function clockRegister(){
+  registerValue=inputValue;
+  drawRegister();
+  document.getElementById("status").innerHTML="Clock edge detected: "+registerValue+" has been stored.<br>Clock edge వచ్చింది: "+registerValue+" register‌లో store అయింది.";
+}
+function clearRegister(){
+  inputValue="00000000";
+  registerValue="00000000";
+  document.getElementById("inputBits").value="";
+  drawRegister();
+  document.getElementById("status").innerHTML="Register cleared.<br>రిజిస్టర్ క్లియర్ అయింది.";
+}
+document.getElementById("inputBits").addEventListener("input",function(){
+  this.value=this.value.replace(/[^01]/g,"").slice(0,8);
+});
+drawRegister();
+</script>
+</body>
+</html>
